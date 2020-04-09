@@ -19,10 +19,8 @@ const mq = window.matchMedia( "(max-width: 900px)" );
 
 if(mq.matches){
     slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log('uslo u if ' + size);
 } else{
     slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log('uslo u else');
 }
 
 // Add class
@@ -71,16 +69,4 @@ slide.addEventListener('transitionend', () => {
         counter = slideImg.length - counter;
         slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
-});
-
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-  }
 });

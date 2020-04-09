@@ -49,83 +49,7 @@ header{
             display: none;
         }
     }
-
-    // Menu button before
-    /*
-    .menu-btn {
-        position: relative;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-        transition: all .5s ease-in-out;
-
-        @media only screen and (max-width: 1400px){
-            display: flex;
-        }
-      }
-
-      .menu-btn__burger {
-        width: 50px;
-        height: 5px;
-        background: $textColor;
-        border-radius: 5px;
-        transition: all .5s ease-in-out;
-
-        @media only screen and (max-width: 600px){
-            width: 40px;
-            height: 4px;
-            border-radius: 4px;
-        }
-      }
-      .menu-btn__burger::before,
-      .menu-btn__burger::after {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 5px;
-        background: $textColor;
-        border-radius: 5px;
-        transition: all .5s ease-in-out;
-
-        @media only screen and (max-width: 600px){
-            width: 40px;
-            height: 4px;
-            border-radius: 4px;
-        }
-      }
-      .menu-btn__burger::before {
-        transform: translateY(-16px);
-
-        @media only screen and (max-width: 600px){
-            transform: translateY(-12px);
-        }
-      }
-      .menu-btn__burger::after {
-        transform: translateY(16px);
-
-        @media only screen and (max-width: 600px){
-            transform: translateY(12px);
-        }
-      }
-      /* ANIMATION */
-    /*  
-      .menu-btn.open .menu-btn__burger {
-        transform: translateX(-50px);
-        background: transparent;
-        box-shadow: none;
-      }
-      .menu-btn.open .menu-btn__burger::before {
-        transform: rotate(45deg) translate(35px, -35px);
-      }
-      .menu-btn.open .menu-btn__burger::after {
-        transform: rotate(-45deg) translate(35px, 35px);
-      }
-    */
 }
-
 .mainContent{
 
     .dots{
@@ -266,14 +190,18 @@ header{
                 transform: rotate(180deg);
                 left: 0;
                 transition: left .15s;
-                
-                @media only screen and (max-width: 1200px){
-                    filter: invert(99%) sepia(5%) saturate(125%) hue-rotate(213deg) brightness(113%) contrast(84%);
-                }
 
                 &:hover{
                     position: relative;
                     left: -3px;
+                }
+
+                @media only screen and (max-width: 1200px){
+                    filter: invert(99%) sepia(5%) saturate(125%) hue-rotate(213deg) brightness(113%) contrast(84%);
+
+                    &:hover{
+                        left: 0px;
+                    }
                 }
             }
             .arrowTwo{
@@ -290,6 +218,10 @@ header{
                 @media only screen and (max-width: 1200px) {
                     margin-left: 0;
                     filter: invert(99%) sepia(5%) saturate(125%) hue-rotate(213deg) brightness(113%) contrast(84%);
+
+                    &:hover{
+                        left: 0px;
+                    }
                 }
                 
             }

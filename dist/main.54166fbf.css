@@ -93,79 +93,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*
-  .menu-btn {
-      position: relative;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      width: 80px;
-      height: 80px;
-      cursor: pointer;
-      transition: all .5s ease-in-out;
-
-      @media only screen and (max-width: 1400px){
-          display: flex;
-      }
-    }
-
-    .menu-btn__burger {
-      width: 50px;
-      height: 5px;
-      background: $textColor;
-      border-radius: 5px;
-      transition: all .5s ease-in-out;
-
-      @media only screen and (max-width: 600px){
-          width: 40px;
-          height: 4px;
-          border-radius: 4px;
-      }
-    }
-    .menu-btn__burger::before,
-    .menu-btn__burger::after {
-      content: '';
-      position: absolute;
-      width: 50px;
-      height: 5px;
-      background: $textColor;
-      border-radius: 5px;
-      transition: all .5s ease-in-out;
-
-      @media only screen and (max-width: 600px){
-          width: 40px;
-          height: 4px;
-          border-radius: 4px;
-      }
-    }
-    .menu-btn__burger::before {
-      transform: translateY(-16px);
-
-      @media only screen and (max-width: 600px){
-          transform: translateY(-12px);
-      }
-    }
-    .menu-btn__burger::after {
-      transform: translateY(16px);
-
-      @media only screen and (max-width: 600px){
-          transform: translateY(12px);
-      }
-    }
-    /* ANIMATION */
-  /*  
-    .menu-btn.open .menu-btn__burger {
-      transform: translateX(-50px);
-      background: transparent;
-      box-shadow: none;
-    }
-    .menu-btn.open .menu-btn__burger::before {
-      transform: rotate(45deg) translate(35px, -35px);
-    }
-    .menu-btn.open .menu-btn__burger::after {
-      transform: rotate(-45deg) translate(35px, 35px);
-    }
-  */
 }
 header .gencoLogo {
   width: 11rem;
@@ -370,14 +297,17 @@ header .navBar .active:after {
   left: 0;
   transition: left 0.15s;
 }
+.mainContent .left .arrows .arrowOne:hover {
+  position: relative;
+  left: -3px;
+}
 @media only screen and (max-width: 1200px) {
   .mainContent .left .arrows .arrowOne {
     filter: invert(99%) sepia(5%) saturate(125%) hue-rotate(213deg) brightness(113%) contrast(84%);
   }
-}
-.mainContent .left .arrows .arrowOne:hover {
-  position: relative;
-  left: -3px;
+  .mainContent .left .arrows .arrowOne:hover {
+    left: 0px;
+  }
 }
 .mainContent .left .arrows .arrowTwo {
   filter: invert(13%) sepia(6%) saturate(6811%) hue-rotate(178deg) brightness(94%) contrast(106%);
@@ -393,6 +323,9 @@ header .navBar .active:after {
   .mainContent .left .arrows .arrowTwo {
     margin-left: 0;
     filter: invert(99%) sepia(5%) saturate(125%) hue-rotate(213deg) brightness(113%) contrast(84%);
+  }
+  .mainContent .left .arrows .arrowTwo:hover {
+    left: 0px;
   }
 }
 .mainContent .left .exes {
@@ -564,7 +497,7 @@ header .navBar .active:after {
 .navigation__button {
   height: 6rem;
   width: 6rem;
-  position: fixed;
+  position: absolute;
   top: 2.5rem;
   right: 6rem;
   border-radius: 0.5rem;
@@ -588,9 +521,9 @@ header .navBar .active:after {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -20rem;
   z-index: 150;
-  opacity: 0;
+  opacity: 1;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -634,6 +567,7 @@ header .navBar .active:after {
 }
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
+  left: 0;
   width: 100%;
 }
 .navigation__icon {
