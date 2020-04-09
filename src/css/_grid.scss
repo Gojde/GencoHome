@@ -1,0 +1,77 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) minmax(min-content, 1410px) minmax(60px, 1fr);
+    grid-template-rows: 10rem 1fr 1fr .17fr;
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1410px) minmax(30px, 1fr);
+    }
+}
+
+header{
+    grid-column: 2 / 3;
+}
+
+.mainContent{
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+
+    display: grid;
+    grid-template-columns: 28% 72%;
+    grid-template-rows: 1fr;
+
+    @media only screen and (max-width: 1400px) {
+        grid-template-columns: 22% 78%;
+    }
+    @media only screen and (max-width:1200px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .dots {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .left{
+        grid-column: 1 / 2;
+        grid-row: 1;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+
+        .slug{
+            grid-column: 1;
+            grid-row: 1 / 2;
+        }
+
+        .arrows{
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .exes{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .svgLine{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .res{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+    }
+
+    .right{
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+        
+        @media only screen and (max-width: 1200px) {
+            grid-column: 1 / 3;
+        } 
+    }
+}
