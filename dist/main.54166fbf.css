@@ -19,6 +19,11 @@ html {
     grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1410px) minmax(30px, 1fr);
   }
 }
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr minmax(min-content, 1410px) 1fr;
+  }
+}
 
 header {
   grid-column: 2/3;
@@ -504,6 +509,16 @@ header .navBar .active:after {
   z-index: 200;
   text-align: center;
   cursor: pointer;
+}
+@media only screen and (max-width: 900px) {
+  .navigation__button {
+    right: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navigation__button {
+    right: 1.5rem;
+  }
 }
 .navigation__background {
   opacity: 0;

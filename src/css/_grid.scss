@@ -6,6 +6,10 @@
     @media only screen and (max-width: 900px) {
         grid-template-columns: minmax(30px, 1fr) minmax(min-content, 1410px) minmax(30px, 1fr);
     }
+
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: 1fr minmax(min-content, 1410px) 1fr;
+    }
 }
 
 header{
